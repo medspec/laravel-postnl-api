@@ -1,6 +1,6 @@
 <?php
 
-namespace DenizTezcan\LaravelPostNLAPI;
+namespace MedSpec\LaravelPostNLAPI;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 

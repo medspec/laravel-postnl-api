@@ -1,6 +1,6 @@
 <?php
 
-namespace DenizTezcan\LaravelPostNLAPI\Entities;
+namespace MedSpec\LaravelPostNLAPI\Entities;
 
 use Exception;
 use ReflectionClass;

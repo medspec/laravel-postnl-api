@@ -1,13 +1,13 @@
 <?php
 
-namespace DenizTezcan\LaravelPostNLAPI;
+namespace MedSpec\LaravelPostNLAPI;
 
-use DenizTezcan\LaravelPostNLAPI\Entities\Address;
-use DenizTezcan\LaravelPostNLAPI\Entities\Customer;
-use DenizTezcan\LaravelPostNLAPI\Entities\LabellingMessage;
-use DenizTezcan\LaravelPostNLAPI\Entities\Shipments;
-use DenizTezcan\LaravelPostNLAPI\Services\Client;
-use DenizTezcan\LaravelPostNLAPI\Services\Converter;
+use MedSpec\LaravelPostNLAPI\Entities\Address;
+use MedSpec\LaravelPostNLAPI\Entities\Customer;
+use MedSpec\LaravelPostNLAPI\Entities\LabellingMessage;
+use MedSpec\LaravelPostNLAPI\Entities\Shipments;
+use MedSpec\LaravelPostNLAPI\Services\Client;
+use MedSpec\LaravelPostNLAPI\Services\Converter;
 
 class PostNLAPI
 {

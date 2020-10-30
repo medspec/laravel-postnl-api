@@ -1,6 +1,6 @@
 <?php
 
-namespace DenizTezcan\LaravelPostNLAPI\Facades;
+namespace MedSpec\LaravelPostNLAPI\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

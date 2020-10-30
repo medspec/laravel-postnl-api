@@ -1,16 +1,16 @@
 Laravel PostNL API package
 ==============
-[![Latest Stable Version](https://poser.pugx.org/deniztezcan/laravel-postnl-api/v/stable)](https://packagist.org/packages/deniztezcan/laravel-postnl-api)
-[![Total Downloads](https://poser.pugx.org/deniztezcan/laravel-postnl-api/downloads)](https://packagist.org/packages/deniztezcan/laravel-postnl-api)
-[![Latest Unstable Version](https://poser.pugx.org/deniztezcan/laravel-postnl-api/v/unstable)](https://packagist.org/packages/deniztezcan/laravel-postnl-api)
-[![License](https://poser.pugx.org/deniztezcan/laravel-postnl-api/license)](https://packagist.org/packages/deniztezcan/laravel-postnl-api)
+[![Latest Stable Version](https://poser.pugx.org/MedSpec/laravel-postnl-api/v/stable)](https://packagist.org/packages/MedSpec/laravel-postnl-api)
+[![Total Downloads](https://poser.pugx.org/MedSpec/laravel-postnl-api/downloads)](https://packagist.org/packages/MedSpec/laravel-postnl-api)
+[![Latest Unstable Version](https://poser.pugx.org/MedSpec/laravel-postnl-api/v/unstable)](https://packagist.org/packages/MedSpec/laravel-postnl-api)
+[![License](https://poser.pugx.org/MedSpec/laravel-postnl-api/license)](https://packagist.org/packages/MedSpec/laravel-postnl-api)
 [![StyleCI](https://github.styleci.io/repos/212767317/shield?branch=master)](https://github.styleci.io/repos/212767317/shield?branch=master)
 
 Intergrates the PostNL API with Laravel 5 & 6 via a ServiceProvider and Facade.
 
 ### Instalation
 ```
-composer require deniztezcan/laravel-postnl-api
+composer require MedSpec/laravel-postnl-api
 ```
 
 Add a ServiceProvider to your providers array in `config/app.php`:
@@ -18,7 +18,7 @@ Add a ServiceProvider to your providers array in `config/app.php`:
     'providers' => [
     	//other things here
 
-    	DenizTezcan\LaravelPostNLAPI\PostNLAPIServiceProvider::class,
+    	MedSpec\LaravelPostNLAPI\PostNLAPIServiceProvider::class,
     ];
 ```
 
@@ -27,13 +27,13 @@ Add the facade to the facades array:
     'aliases' => [
     	//other things here
 
-    	'PostNLAPI' => DenizTezcan\LaravelPostNLAPI\Facades\PostNLAPI::class,
+    	'PostNLAPI' => MedSpec\LaravelPostNLAPI\Facades\PostNLAPI::class,
     ];
 ```
 
 Finally, publish the configuration files:
 ```
-php artisan vendor:publish --provider="DenizTezcan\LaravelPostNLAPI\PostNLAPIServiceProvider"
+php artisan vendor:publish --provider="MedSpec\LaravelPostNLAPI\PostNLAPIServiceProvider"
 ```
 
 ### Configuration
@@ -47,7 +47,7 @@ $barcode = PostNLAPI::generateBarcode('3S', '00000000000-99999999999');
 
 To generate a `label` you can use the following call. To find which `PrinterType`, `AddressType` and `ProductCodeDelivery` to use please check [PostNL documentation](https://developer.postnl.nl/browse-apis/send-and-track/labelling-webservice/documentation/)
 ```php
-use DenizTezcan\LaravelPostNLAPI\Entities\{Address, Contact};
+use MedSpec\LaravelPostNLAPI\Entities\{Address, Contact};
 
 $label = PostNLAPI::generateLabel(
 	$barcode, 

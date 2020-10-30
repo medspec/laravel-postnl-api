@@ -1,6 +1,6 @@
 <?php
 
-namespace DenizTezcan\LaravelPostNLAPI\Services;
+namespace MedSpec\LaravelPostNLAPI\Services;
 
 use Exception;
 use GuzzleHttp\Client as GuzzleClient;

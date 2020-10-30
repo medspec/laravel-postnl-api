@@ -1,11 +1,11 @@
 <?php
 
-namespace DenizTezcan\LaravelPostNLAPI\Services;
+namespace MedSpec\LaravelPostNLAPI\Services;
 
 use Carbon\Carbon;
-use DenizTezcan\LaravelPostNLAPI\Entities\Customer;
-use DenizTezcan\LaravelPostNLAPI\Entities\LabellingMessage;
-use DenizTezcan\LaravelPostNLAPI\Entities\Shipments;
+use MedSpec\LaravelPostNLAPI\Entities\Customer;
+use MedSpec\LaravelPostNLAPI\Entities\LabellingMessage;
+use MedSpec\LaravelPostNLAPI\Entities\Shipments;
 
 class Converter
 {
