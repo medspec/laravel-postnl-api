@@ -78,6 +78,12 @@ class PostNLAPI
         return $label['ResponseShipments'][0]['Labels'];
     }
 
+    public function getShipmentStatus( $barcode ) {
+        $client = new Client();
+        $response = $client::get('shipment/v2/status/barcode/'. $barcode, $this->customer);
+        return $response['CurrentStatus'] ?? "";
+    }
+
     public function nearestLocations(
         $countryCode = 'NL',
         $postalCode = '1111AA',
