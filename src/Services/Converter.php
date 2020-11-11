@@ -30,6 +30,9 @@ class Converter
         $data->Customer->CustomerNumber = $customer->getCustomerNumber();
         $data->Customer->Email = $customer->getEmail();
 
+        $data->Customer->Name = $customer->getName();
+        $data->Customer->FirstName = $customer->getFirstName();
+
         $data->Message = new \stdClass();
         $data->Message->MessageID = 1;
         $data->Message->MessageTimeStamp = Carbon::now()->format('d-m-Y H:i:s');
@@ -46,6 +49,11 @@ class Converter
             $address->HouseNrExt = $shipmentAddress->getHouseNrExt();
             $address->Street = $shipmentAddress->getStreet();
             $address->Zipcode = $shipmentAddress->getZipcode();
+
+            $address->Name = $shipmentAddress->getName();
+            $address->FirstName = $shipmentAddress->getFirstName();
+
+
 
             $shipmentsAddresses[] = $address;
         }
@@ -68,6 +76,9 @@ class Converter
         $data->Shipments->ProductCodeDelivery = $shipments->getProductCodeDelivery();
         $data->Shipments->Reference = $shipments->getReference();
         $data->Shipments->Remark = $shipments->getRemark();
+
+        $data->Shipments->Name = $shipments->getName();
+        $data->Shipments->FirstName = $shipments->getFirstName();
 
         return $data;
     }
