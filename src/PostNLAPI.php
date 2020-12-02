@@ -54,11 +54,19 @@ class PostNLAPI
         $deliveryAddress,
         $productCodeDelivery,
         $reference,
-        $remark
+        $remark,
+        $sender = null
     ) {
         $client = new Client();
+
+        if($sender){
+            $customer = $sender;
+        } else {
+            $customer = $this->customer;
+        }
+
         $data = Converter::Label(
-            $this->customer,
+            $customer,
             LabellingMessage::create([
                 'Printertype' => $printerType,
             ]),
