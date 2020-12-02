@@ -80,8 +80,8 @@ class PostNLAPI
 
     public function getShipmentStatus( $barcode ) {
         $client = new Client();
-        $response = $client::get('shipment/v2/status/barcode/'. $barcode, $this->customer);
-        return $response['CurrentStatus'] ?? "";
+        $response = $client::get('shipment/v2/status/barcode/'. $barcode, null);
+        return $response ?? [];
     }
 
     public function nearestLocations(

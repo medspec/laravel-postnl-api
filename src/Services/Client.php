@@ -23,7 +23,10 @@ class Client
     {
         $fullUrl = config('postnlapi.api.url');
         $fullUrl .= $url;
-        $fullUrl .= '&CustomerCode='.$customer->getCustomerCode().'&CustomerNumber='.$customer->getCustomerNumber();
+        
+        if(!is_null($customer)){
+            $fullUrl .= '&CustomerCode='.$customer->getCustomerCode().'&CustomerNumber='.$customer->getCustomerNumber();
+        }
 
         return $fullUrl;
     }
@@ -39,7 +42,7 @@ class Client
         }
     }
 
-    public static function get($url, $customer)
+    public static function get($url, $customer = null )
     {
         $fullUrl = self::prepareUrl($url, $customer);
 
@@ -77,7 +80,6 @@ class Client
                 ],
                 'json' => $data,
             ]);
-
             if ($response->getStatusCode() == 200) {
                 self::initGuzzleClient();
 
@@ -87,7 +89,6 @@ class Client
             }
         } catch (Exception $e) {
             report($e);
-
             return false;
         }
     }
