@@ -3,7 +3,7 @@
     "description": "Laravel PostNL API package",
     "type": "library",
     "license": "MIT",
-    "version": "0.2",
+    "version": "0.5",
     "homepage": "https://github.com/medspec/laravel-postnl-api",
     "authors": [
         {
