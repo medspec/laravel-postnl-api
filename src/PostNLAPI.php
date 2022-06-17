@@ -82,8 +82,12 @@ class PostNLAPI
         );
 
         $label = $client::post('shipment/v2_2/label?confirm=true', $data, $this->customer);
+        
+        if ($label) {
+            return $label['ResponseShipments'][0]['Labels'];
+        }
 
-        return $label['ResponseShipments'][0]['Labels'];
+        return false;
     }
 
     public function getShipmentStatus( $barcode ) {
